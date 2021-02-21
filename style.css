@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+/*Reseta todo conteúdo da página*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: #1C1F2B;
+    background-image: url(Images/esdeath.jpg);
+    background-position: 95% 40%;
+    background-size: 1700px;
+}
+
+.content{
+    background-color: #FBFFFE;
+    border-radius: 4px;
+    width: 960px;
+    height: 60%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.content::before{
+    content: '';
+    position: absolute;
+    background-color: #3653BD;
+    width: 40%;
+    height: 100%;
+    border-radius: 4px 0 0 4px;
+}
+
+.title{
+    font-size: 28px;
+    font-weight: bold;
+}
+.title-primary{
+    color: #FBFFFE;
+    margin-bottom: 15px;
+}
+.title-secondary{
+    color: #3653BD;
+}
+
+.description{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 9x;
+    
+}
+.decription-primary{
+    color: #FBFFFE;
+}
+.decription-secondary{
+    color: #154EBF;
+}
+
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #FBFFFE;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border-width: 0;
+    margin-top: 10px;
+    outline: none;
+}
+.btn-primary{
+    background-color: transparent;
+    border: 1px solid #FBFFFE;
+    transition: background-color 0.5s;
+    margin-top: 25px;
+}
+.btn-primary:hover{
+    background-color: #FBFFFE;
+    color: #3653BD;
+}
+.btn-secondary{
+    background-color: #3653BD;
+    border: 1px solid #3653BD;
+    transition: background-color 0.5s;
+}
+.btn-secondary:hover{
+    background-color: #FBFFFE;
+    color: #3653BD;
+}
+
+.first-column{
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+
+.second-column{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-content{
+    display: flex;
+}
+.first-content .second-column{
+    z-index: 12;
+}
+
+.social-media{
+    margin: 1rem 0;
+}
+.list-social-media{
+    display: flex;
+    list-style: none;
+}
+.item-social-media{
+    border: 1px solid #3653BD;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #3653BD;   
+}
+
+.link-social-media:not(:first-child){
+    margin-left: 10px;
+}
+.link-social-media .item-social-media:hover{
+    background-color: #3653BD;
+    color: #FBFFFE;
+    border-color: #3653BD;
+}
+.link-social-media .item-social-media{
+    transition: background-color 0.5s;
+}
+
+.label-input{
+    background-color: #8cc8d649;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    border-radius: 4px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+
+}
+.form input{
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color:transparent;
+    outline: none;
+    border-radius: 4px;
+    outline: none;
+    color: #3653BD;
+}
+
+::-webkit-input-placeholder {
+    color: #2f83c7;
+    
+ }
+
+.icon-modify{
+    color: #2f83c7;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.second-content{
+    position: absolute;
+    display: flex;
+}
+.second-content .first-column{
+    order: 2;
+    z-index: -1;
+}
+.second-content .second-column{
+    order: 1;
+    z-index: -1;
+}
+
+.link-forgot{
+    font-size: 14px;
+    text-align: center;
+    color: #D91122;
+    margin: 10px 0;
+}
+.link-forgot::first-letter{
+    text-transform: capitalize;
+}
+
+/*Implementando CSS no body pelo CSS-JS*/
+.sign-in-js .first-content .first-column{
+    z-index: -1;
+}
+
+.sign-in-js .second-content .second-column{
+    z-index: 12;
+}
+.sign-in-js .second-content .first-column{
+    z-index: 14;
+}
+.sign-in-js .content::before{
+    left: 60%;
+    border-radius: 0 4px 4px 0;
+    animation: slidein 2s;
+    z-index: 13;
+    background-color: #730606;
+    transition: all 4s;
+}
+.sign-in-js .container{
+    background-image: url(Images/akame-3.png);
+    background-position: 10% 70%;
+    background-size: 1400px;
+    animation: esdeath-to-akame 3s;
+    
+}
+.sign-in-js .title-secondary{
+    color: #730606;
+}
+.sign-in-js .decription-secondary{
+    color: #730606;
+}
+.sign-in-js .btn-secondary{
+    background-color: #730606;
+    border: 1px solid #730606;
+}
+.sign-in-js .btn-secondary:hover{
+    background-color: #FBFFFE;
+    color: #730606;
+}
+.sign-in-js .btn-primary:hover{
+    color: #730606;
+}
+.sign-in-js .item-social-media{
+    border: 1px solid #730606;
+    color: #730606;
+}
+.sign-in-js .link-social-media .item-social-media:hover{
+    background-color: #730606;
+    color: #FBFFFE;
+    border-color: #730606;
+}
+.sign-in-js .label-input{
+    background-color: #bd777b81;
+}
+.sign-in-js .form input{
+    color: #730606;
+}
+.sign-in-js ::-webkit-input-placeholder {
+    color: #2a33428c;
+ }
+ .sign-in-js .icon-modify{
+    color: #2a33428c;
+}
+
+
+.sign-up-js .second-content .first-column{
+    z-index: -1;
+}
+
+.sign-up-js .first-content .second-column{
+    z-index: 12;
+}
+.sign-up-js .first-content .first-column{
+    z-index: 14;
+}
+.sign-up-js .content::before{
+    left: 0;
+    border-radius: 4px 0 0 4px;
+    animation: slideout 2s;
+    z-index: 13;
+    transition: all 4s;
+}
+.sign-up-js .container{
+    animation: akame-to-esdeath 3s;
+}
+
+
+/*Deslocamento do conteúdo atrás do content before*/
+.sign-in-js .first-content .second-column{
+    z-index: -1;
+    position: relative;
+    animation: moving-left 1s;
+}
+
+.sign-up-js .second-content .second-column{
+    z-index: -1;
+    position: relative;
+    animation: moving-right 1s;
+}
+
+/*Animações com CSS*/
+
+@keyframes slidein{
+    from{
+        left: 0;
+        width: 40%;
+    }
+
+    to{
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout{
+    from{
+        left: 60%;
+        width: 40%;
+    }
+
+    to{
+        left: 0;
+        width: 40%;
+    }
+}
+
+
+@keyframes moving-left{
+    from{
+        left: 0;
+        opacity: 1;
+        z-index: 13;
+    }
+
+    25%{
+        left: -80px;
+        
+    }
+
+    50%{
+        left: -100px;
+        opacity: 0.2;
+    }
+
+    to{
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes moving-right{
+    from{
+        left: 0;
+        opacity: 1;
+        z-index: 13;
+    }
+
+    25%{
+        left: 80px;
+        
+    }
+
+    50%{
+        left: 100px;
+        opacity: 0.2;
+    }
+
+    to{
+        left: 110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes esdeath-to-akame{
+    from{
+        background-image: url(Images/esdeath.jpg);
+        background-position: 95% 40%;
+        background-size: 1700px;
+    }
+
+    to{
+        background-image: url(Images/akame-3.png);
+        background-position: 10% 70%;
+        background-size: 1400px;
+    }
+}
+
+@keyframes akame-to-esdeath{
+    from{
+        background-image: url(Images/akame-3.png);
+        background-position: 10% 70%;
+        background-size: 1400px;
+    }
+
+    to{
+        background-image: url(Images/esdeath.jpg);
+        background-position: 95% 40%;
+        background-size: 1700px;
+    }
+}
